@@ -12,7 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Loader2, Phone, PhoneOff, Search, Plus, Trash2, Upload, X, Check, AlertCircle, FileText, Home, MessageSquare, Clock, Settings, PhoneCall, PhoneIncoming, PhoneOutgoing, PhoneMissed, Mail, Archive, Eye, Filter, ChevronRight, BarChart2, Volume2, Sparkles } from 'lucide-react'
+import { Loader2, Phone, PhoneOff, Search, Plus, Trash2, Upload, X, Check, AlertCircle, FileText, Home as HomeIcon, MessageSquare, Clock, Settings, PhoneCall, PhoneIncoming, PhoneOutgoing, PhoneMissed, Mail, Archive, Eye, Filter, ChevronRight, BarChart2, Volume2, Sparkles } from 'lucide-react'
 import { uploadAndTrainDocument, getDocuments, deleteDocuments, useRAGKnowledgeBase } from '@/lib/ragKnowledgeBase'
 
 // Constants
@@ -138,7 +138,7 @@ function UrgencyBadge({ urgency }: { urgency: string }) {
 
 // Sidebar navigation items
 const NAV_ITEMS = [
-  { id: 'dashboard', label: 'Dashboard', icon: Home },
+  { id: 'dashboard', label: 'Dashboard', icon: HomeIcon },
   { id: 'messages', label: 'Messages', icon: MessageSquare },
   { id: 'history', label: 'Call History', icon: Clock },
   { id: 'settings', label: 'Settings', icon: Settings },
