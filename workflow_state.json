@@ -1,0 +1,21 @@
+{
+  "agents": [
+    {
+      "name": "Voice Receptionist Agent",
+      "agent_id": "698bba36f0ec4d8b7099bf4d",
+      "type": "voice",
+      "voice_config": {
+        "provider": "lyzr_voice",
+        "mode": "inbound"
+      },
+      "rag_id": "698bba2567a82d6d27bdde7c"
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "name": "business_info_faqs",
+      "rag_id": "698bba2567a82d6d27bdde7c",
+      "rag_name": "businessinfofaqskvkr"
+    }
+  ]
+}

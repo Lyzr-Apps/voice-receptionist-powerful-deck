@@ -1,0 +1,54 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "Inbound Call",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "voice_receptionist_agent",
+        "type": "Agent",
+        "label": "Voice Receptionist Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Call Response",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      {
+        "source": "input_node",
+        "target": "voice_receptionist_agent"
+      },
+      {
+        "source": "voice_receptionist_agent",
+        "target": "output_node"
+      }
+    ]
+  },
+  "agents": [
+    {
+      "node_id": "voice_receptionist_agent",
+      "agent_id": "698bba36f0ec4d8b7099bf4d",
+      "name": "Voice Receptionist Agent",
+      "type": "voice",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 0.95,
+      "voice_config": {
+        "provider": "lyzr_voice",
+        "mode": "inbound"
+      },
+      "knowledge_base": {
+        "rag_id": "698bba2567a82d6d27bdde7c",
+        "rag_name": "businessinfofaqskvkr"
+      }
+    }
+  ]
+}
